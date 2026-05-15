@@ -11,12 +11,6 @@
 build/Release/iec61850_wrapper_test.exe
 ```
 
-如果编译的是 Debug，则可能位于：
-
-```text
-build/Debug/iec61850_wrapper_test.exe
-```
-
 ---
 
 ## 2. 程序用途
@@ -66,6 +60,8 @@ build/Debug/iec61850_wrapper_test.exe
 --control-type <bool|int32|uint32|float|double|enum|timestamp|bitstring>
 --control-value <value>
 --report-ref <ref>
+--msg-log-file <path>
+--msg-log-stdout
 --skip-read
 --skip-write
 --skip-control
@@ -327,7 +323,36 @@ build/Debug/iec61850_wrapper_test.exe
 
 ---
 
-### 5.6 跳过参数
+### 5.6 消息记录参数
+
+#### `--msg-log-file <path>`
+将测试过程中的 TX/RX 风格消息记录追加写入到指定文件。
+
+这些记录不是底层抓包得到的原始二进制网络帧，而是测试程序按操作过程输出的通信记录，适合做联调、问题排查和后续导入自定义 viewer。
+
+示例：
+
+```powershell
+--msg-log-file msg.log
+```
+
+---
+
+#### `--msg-log-stdout`
+将同样的消息记录额外输出到当前终端。
+
+启用后，终端中会看到类似：
+
+```text
+[MSG][2025-08-08 12:00:00.123][TX][Connect] server=192.168.31.68 port=102 connectTimeoutMs=3000 requestTimeoutMs=3000
+[MSG][2025-08-08 12:00:00.456][RX][Connect] ret=0 errCode=0 errText=connect success
+```
+
+如果同时指定 `--msg-log-file`，则会同时输出到终端并写入文件。
+
+---
+
+### 5.7 跳过参数
 
 #### `--skip-read`
 跳过读取测试。
@@ -446,6 +471,22 @@ build/Debug/iec61850_wrapper_test.exe
 
 ---
 
+### 7.10 输出消息记录到文件
+
+```powershell
+.\build\Release\iec61850_wrapper_test.exe --server 192.168.1.100 --read-ref "LD0/MMXU1.TotW.mag.f" --read-type float --msg-log-file msg.log
+```
+
+---
+
+### 7.11 同时输出消息记录到终端和文件
+
+```powershell
+.\build\Release\iec61850_wrapper_test.exe --server 192.168.1.100 --read-ref "LD0/MMXU1.TotW.mag.f" --read-type float --msg-log-file msg.log --msg-log-stdout
+```
+
+---
+
 ## 8. 输出说明
 程序执行时通常会输出以下类型信息：
 
@@ -511,6 +552,31 @@ sourceTsMs=1718000000000
 
 ---
 
+### 8.6 消息记录输出
+启用 `--msg-log-file` 或 `--msg-log-stdout` 后，程序会输出类似 Modbus 工具中 TX/RX 风格的通信记录。
+
+示例：
+
+```text
+[MSG][2025-08-08 12:00:00.123][TX][Connect] server=192.168.31.68 port=102 connectTimeoutMs=3000 requestTimeoutMs=3000
+[MSG][2025-08-08 12:00:00.456][RX][Connect] ret=0 errCode=0 errText=connect success
+[MSG][2025-08-08 12:00:00.500][TX][ReadValue] ref=simpleIOGenericIO/GGIO1.AnIn1.mag.f type=4
+[MSG][2025-08-08 12:00:00.520][RX][ReadValue] ret=0 errCode=0 errText=read ok
+[MSG][2025-08-08 12:00:00.521][RX][ReadValue] ref=simpleIOGenericIO/GGIO1.AnIn1.mag.f value=float:0.000000 sourceTsMs=1778812693000
+```
+
+字段含义：
+
+- 第一个时间字段：本地记录时间
+- `TX`：测试程序发起的操作请求
+- `RX`：测试程序收到的返回、状态、日志或报告回调
+- `Connect / ReadValue / WriteValue / Operate / EnableReport`：对应操作名称
+
+注意：
+这里记录的是**操作级消息日志**，不是底层原始 MMS 二进制抓包数据。
+
+---
+
 ## 9. 使用建议
 
 ### 9.1 先从只读测试开始
@@ -550,6 +616,17 @@ LD0/LLN0.RP.RP01
 - not found
 - access denied
 - dataset mismatch
+
+---
+
+### 9.4 建议联调时开启消息记录
+如果你希望像 Modbus 调试工具那样查看 TX/RX 风格的通信过程，建议在测试时增加：
+
+```powershell
+--msg-log-file msg.log --msg-log-stdout
+```
+
+这样既能在终端实时看消息，也能保留一份文件用于后续分析。
 
 ---
 
@@ -597,21 +674,7 @@ LD0/LLN0.RP.RP01
 
 ---
 
-## 11. 推荐测试顺序
-建议按下面顺序逐步验证：
-
-1. `Connect`
-2. `KeepAlive`
-3. `ReadValue`
-4. `WriteValue`
-5. `Operate`
-6. `EnableReport / DisableReport`
-
-这样更容易定位问题。
-
----
-
-## 12. 相关文件
+## 11. 相关文件
 
 - 对外头文件：`inc/iec61850_wrapper.h`
 - wrapper 实现：`src/iec61850_wrapper.cpp`

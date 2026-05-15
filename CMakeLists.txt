@@ -45,6 +45,7 @@ target_link_libraries(iec61850_wrapper
 
 add_executable(iec61850_wrapper_test
     src/iec61850_wrapper_test.cpp
+    src/test_msg_logger.cpp
 )
 
 target_link_libraries(iec61850_wrapper_test

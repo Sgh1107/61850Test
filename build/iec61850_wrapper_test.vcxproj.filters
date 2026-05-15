@@ -4,6 +4,9 @@
     <ClCompile Include="C:\Users\win1064\Desktop\iec61850wrapper\src\iec61850_wrapper_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\iec61850wrapper\src\test_msg_logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\win1064\Desktop\iec61850wrapper\CMakeLists.txt" />

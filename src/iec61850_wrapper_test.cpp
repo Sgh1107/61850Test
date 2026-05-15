@@ -1,9 +1,15 @@
 #include "iec61850_wrapper.h"
+#include "test_msg_logger.h"
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <windows.h>
+
+typedef struct TestAppContext
+{
+    TestMsgLogger* msgLogger;
+} TestAppContext;
 
 static HANDLE g_console = NULL;
 static WORD g_defaultAttr = 0;
@@ -58,6 +64,8 @@ static void print_usage(const char* exe)
     printf("  --control-type <bool|int32|uint32|float|double|enum|timestamp|bitstring>\n");
     printf("  --control-value <value>\n");
     printf("  --report-ref <ref>\n");
+    printf("  --msg-log-file <path>\n");
+    printf("  --msg-log-stdout\n");
     printf("  --skip-read | --skip-write | --skip-control | --skip-report\n");
     printf("  --help\n");
 }
@@ -155,6 +163,52 @@ static int fill_value_from_text(IEC61850_VALUE_TYPE type, const char* text, IEC6
     return 1;
 }
 
+static void format_value_text(const IEC61850_Value* value, char* buffer, size_t bufferSize)
+{
+    if (!buffer || bufferSize == 0) return;
+
+    buffer[0] = '\0';
+
+    if (!value) {
+        _snprintf(buffer, bufferSize, "<null>");
+        buffer[bufferSize - 1] = '\0';
+        return;
+    }
+
+    switch (value->type)
+    {
+    case IEC61850_TYPE_BOOL:
+        _snprintf(buffer, bufferSize, "bool:%d", (int)value->v.b);
+        break;
+    case IEC61850_TYPE_INT32:
+        _snprintf(buffer, bufferSize, "int32:%d", (int)value->v.i32);
+        break;
+    case IEC61850_TYPE_UINT32:
+        _snprintf(buffer, bufferSize, "uint32:%u", (unsigned int)value->v.u32);
+        break;
+    case IEC61850_TYPE_FLOAT:
+        _snprintf(buffer, bufferSize, "float:%f", value->v.f32);
+        break;
+    case IEC61850_TYPE_DOUBLE:
+        _snprintf(buffer, bufferSize, "double:%.12f", value->v.f64);
+        break;
+    case IEC61850_TYPE_ENUM:
+        _snprintf(buffer, bufferSize, "enum:%d", (int)value->v.e);
+        break;
+    case IEC61850_TYPE_TIMESTAMP_MS:
+        _snprintf(buffer, bufferSize, "timestamp_ms:%lld", (long long)value->v.tsMs);
+        break;
+    case IEC61850_TYPE_BITSTRING:
+        _snprintf(buffer, bufferSize, "bitstring:0x%08X", (unsigned int)value->v.bitString);
+        break;
+    default:
+        _snprintf(buffer, bufferSize, "unknown");
+        break;
+    }
+
+    buffer[bufferSize - 1] = '\0';
+}
+
 static void print_value(const IEC61850_Value* value)
 {
     if (!value) return;
@@ -197,7 +251,7 @@ static void print_value(const IEC61850_Value* value)
 
 static void test_log_cb(int32_t level, const char* msg, void* userData)
 {
-    (void)userData;
+    TestAppContext* app = (TestAppContext*)userData;
 
     if (level >= 2)
         set_console_color(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
@@ -208,26 +262,38 @@ static void test_log_cb(int32_t level, const char* msg, void* userData)
 
     printf("[LOG][%d] %s\n", (int)level, msg ? msg : "");
     reset_console_color();
+
+    if (app && app->msgLogger) {
+        TestMsgLogger_Logf(app->msgLogger, "RX", "LOG", "level=%d msg=%s", (int)level, msg ? msg : "");
+    }
 }
 
 static void test_state_cb(int32_t connected, int32_t reason, void* userData)
 {
-    (void)userData;
+    TestAppContext* app = (TestAppContext*)userData;
+
     set_console_color(connected ? (FOREGROUND_GREEN | FOREGROUND_INTENSITY) : (FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY));
     printf("[STATE] connected=%d reason=%d\n", (int)connected, (int)reason);
     reset_console_color();
+
+    if (app && app->msgLogger) {
+        TestMsgLogger_Logf(app->msgLogger, "RX", "STATE", "connected=%d reason=%d", (int)connected, (int)reason);
+    }
 }
 
 static void test_report_cb(const IEC61850_ReportBatch* batch, void* userData)
 {
     int32_t i;
-    (void)userData;
+    TestAppContext* app = (TestAppContext*)userData;
 
     set_console_color(FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
 
     if (!batch) {
         printf("[REPORT] null batch\n");
         reset_console_color();
+        if (app && app->msgLogger) {
+            TestMsgLogger_LogRx(app->msgLogger, "REPORT", "null batch");
+        }
         return;
     }
 
@@ -235,6 +301,13 @@ static void test_report_cb(const IEC61850_ReportBatch* batch, void* userData)
         batch->rcbRef ? batch->rcbRef : "",
         (int)batch->itemCount,
         (long long)batch->reportTsMs);
+
+    if (app && app->msgLogger) {
+        TestMsgLogger_Logf(app->msgLogger, "RX", "REPORT", "rcb=%s itemCount=%d ts=%lld",
+            batch->rcbRef ? batch->rcbRef : "",
+            (int)batch->itemCount,
+            (long long)batch->reportTsMs);
+    }
 
     for (i = 0; i < batch->itemCount; ++i)
     {
@@ -245,6 +318,16 @@ static void test_report_cb(const IEC61850_ReportBatch* batch, void* userData)
             item->ref ? item->ref : "",
             (int)item->value.type,
             (int)item->value.quality);
+
+        if (app && app->msgLogger) {
+            char valueText[128];
+            format_value_text(&item->value, valueText, sizeof(valueText));
+            TestMsgLogger_Logf(app->msgLogger, "RX", "REPORT_ITEM", "ref=%s type=%d quality=%d value=%s",
+                item->ref ? item->ref : "",
+                (int)item->value.type,
+                (int)item->value.quality,
+                valueText);
+        }
     }
 
     reset_console_color();
@@ -254,6 +337,16 @@ static void print_ret(const char* tag, int32_t ret, IEC61850_HANDLE h)
 {
     print_status_prefix(tag, (ret == IEC61850_RET_OK));
     printf("ret=%d errCode=%d errText=%s\n",
+        (int)ret,
+        (int)Iec61850_GetLastErrorCode(h),
+        Iec61850_GetLastErrorText(h));
+}
+
+static void log_ret_message(TestMsgLogger* logger, const char* operation, int32_t ret, IEC61850_HANDLE h)
+{
+    if (!logger) return;
+
+    TestMsgLogger_Logf(logger, "RX", operation, "ret=%d errCode=%d errText=%s",
         (int)ret,
         (int)Iec61850_GetLastErrorCode(h),
         Iec61850_GetLastErrorText(h));
@@ -269,6 +362,9 @@ int main(int argc, char** argv)
     IEC61850_Value val;
     IEC61850_Value writeVal;
     IEC61850_Value controlVal;
+    TestMsgLoggerConfig msgLogConfig;
+    TestMsgLogger* msgLogger = NULL;
+    TestAppContext app;
     const char* serverIp = "127.0.0.1";
     int serverPort = 102;
     const char* readRef = "LD0/MMXU1.TotW.mag.f";
@@ -285,6 +381,9 @@ int main(int argc, char** argv)
     int doWrite = 0;
     int doControl = 0;
     int doReport = 0;
+
+    memset(&msgLogConfig, 0, sizeof(msgLogConfig));
+    memset(&app, 0, sizeof(app));
 
     init_console_color();
 
@@ -352,6 +451,12 @@ int main(int argc, char** argv)
             reportRef = argv[++argi];
             doReport = 1;
         }
+        else if (strcmp(arg, "--msg-log-file") == 0 && argi + 1 < argc) {
+            msgLogConfig.filePath = argv[++argi];
+        }
+        else if (strcmp(arg, "--msg-log-stdout") == 0) {
+            msgLogConfig.enableStdout = 1;
+        }
         else if (strcmp(arg, "--skip-read") == 0) {
             doRead = 0;
         }
@@ -381,6 +486,14 @@ int main(int argc, char** argv)
         return 2;
     }
 
+    msgLogger = TestMsgLogger_Create(&msgLogConfig);
+    app.msgLogger = msgLogger;
+
+    if (msgLogger && TestMsgLogger_IsEnabled(msgLogger)) {
+        TestMsgLogger_Logf(msgLogger, "INFO", "SESSION", "start server=%s port=%d doRead=%d doWrite=%d doControl=%d doReport=%d",
+            serverIp, serverPort, doRead, doWrite, doControl, doReport);
+    }
+
     set_console_color(FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     printf("====== IEC61850 wrapper cmd Test start ======\n");
     reset_console_color();
@@ -397,12 +510,21 @@ int main(int argc, char** argv)
         set_console_color(FOREGROUND_RED | FOREGROUND_INTENSITY);
         printf("CreateClient failed\n");
         reset_console_color();
+        if (msgLogger) {
+            TestMsgLogger_LogRx(msgLogger, "CreateClient", "failed");
+            TestMsgLogger_Destroy(msgLogger);
+        }
         return 1;
     }
 
-    Iec61850_SetLogCallback(h, test_log_cb, NULL);
-    Iec61850_SetStateCallback(h, test_state_cb, NULL);
-    Iec61850_SetReportCallback(h, test_report_cb, NULL);
+    if (msgLogger) {
+        TestMsgLogger_LogInfo(msgLogger, "client created");
+        log_ret_message(msgLogger, "GlobalInit", ret, h);
+    }
+
+    Iec61850_SetLogCallback(h, test_log_cb, &app);
+    Iec61850_SetStateCallback(h, test_state_cb, &app);
+    Iec61850_SetReportCallback(h, test_report_cb, &app);
 
     memset(&conn, 0, sizeof(conn));
     conn.serverIp = serverIp;
@@ -412,61 +534,122 @@ int main(int argc, char** argv)
     conn.autoReconnect = 0;
     conn.reconnectIntervalMs = 3000;
 
+    if (msgLogger) {
+        TestMsgLogger_Logf(msgLogger, "TX", "Connect", "server=%s port=%d connectTimeoutMs=%d requestTimeoutMs=%d",
+            conn.serverIp ? conn.serverIp : "",
+            (int)conn.serverPort,
+            (int)conn.connectTimeoutMs,
+            (int)conn.requestTimeoutMs);
+    }
+
     ret = Iec61850_Connect(h, &conn);
     print_ret("Connect", ret, h);
+    log_ret_message(msgLogger, "Connect", ret, h);
 
     if (ret == IEC61850_RET_OK) {
         ret = Iec61850_IsConnected(h, &connected);
         print_status_prefix("IsConnected", (ret == IEC61850_RET_OK && connected));
         printf("ret=%d connected=%d\n", (int)ret, (int)connected);
+        if (msgLogger) {
+            TestMsgLogger_Logf(msgLogger, "RX", "IsConnected", "ret=%d connected=%d", (int)ret, (int)connected);
+        }
 
+        if (msgLogger) {
+            TestMsgLogger_LogTx(msgLogger, "KeepAlive", "request");
+        }
         ret = Iec61850_KeepAlive(h);
         print_ret("KeepAlive", ret, h);
+        log_ret_message(msgLogger, "KeepAlive", ret, h);
 
         if (doRead) {
+            char valueText[128];
+            if (msgLogger) {
+                TestMsgLogger_Logf(msgLogger, "TX", "ReadValue", "ref=%s type=%d", readRef ? readRef : "", (int)readType);
+            }
             memset(&val, 0, sizeof(val));
             ret = Iec61850_ReadValue(h, readRef, readType, &val);
             print_ret("ReadValue", ret, h);
+            log_ret_message(msgLogger, "ReadValue", ret, h);
             if (ret == IEC61850_RET_OK) {
                 print_value(&val);
                 set_console_color(FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
                 printf("sourceTsMs=%lld\n", (long long)val.sourceTsMs);
                 reset_console_color();
+                format_value_text(&val, valueText, sizeof(valueText));
+                if (msgLogger) {
+                    TestMsgLogger_Logf(msgLogger, "RX", "ReadValue", "ref=%s value=%s sourceTsMs=%lld",
+                        readRef ? readRef : "",
+                        valueText,
+                        (long long)val.sourceTsMs);
+                }
             }
         }
 
         if (doWrite) {
+            char valueText[128];
+            format_value_text(&writeVal, valueText, sizeof(valueText));
+            if (msgLogger) {
+                TestMsgLogger_Logf(msgLogger, "TX", "WriteValue", "ref=%s value=%s", writeRef ? writeRef : "", valueText);
+            }
             ret = Iec61850_WriteValue(h, writeRef, &writeVal);
             print_ret("WriteValue", ret, h);
+            log_ret_message(msgLogger, "WriteValue", ret, h);
         }
 
         if (doControl) {
+            char valueText[128];
+            format_value_text(&controlVal, valueText, sizeof(valueText));
+            if (msgLogger) {
+                TestMsgLogger_Logf(msgLogger, "TX", "Operate", "ref=%s mode=%d value=%s", controlRef ? controlRef : "", (int)controlMode, valueText);
+            }
             ret = Iec61850_Operate(h, controlRef, &controlVal, controlMode, 3000);
             print_ret("Operate", ret, h);
+            log_ret_message(msgLogger, "Operate", ret, h);
         }
 
         if (doReport) {
+            if (msgLogger) {
+                TestMsgLogger_Logf(msgLogger, "TX", "EnableReport", "rcbRef=%s", reportRef ? reportRef : "");
+            }
             ret = Iec61850_EnableReport(h, reportRef);
             print_ret("EnableReport", ret, h);
+            log_ret_message(msgLogger, "EnableReport", ret, h);
 
+            if (msgLogger) {
+                TestMsgLogger_Logf(msgLogger, "TX", "DisableReport", "rcbRef=%s", reportRef ? reportRef : "");
+            }
             ret = Iec61850_DisableReport(h, reportRef);
             print_ret("DisableReport", ret, h);
+            log_ret_message(msgLogger, "DisableReport", ret, h);
         }
     }
 
+    if (msgLogger) {
+        TestMsgLogger_LogTx(msgLogger, "Disconnect", "request");
+    }
     ret = Iec61850_Disconnect(h);
     print_ret("Disconnect", ret, h);
+    log_ret_message(msgLogger, "Disconnect", ret, h);
 
     ret = Iec61850_DestroyClient(h);
     print_status_prefix("DestroyClient", (ret == IEC61850_RET_OK));
     printf("ret=%d\n", (int)ret);
+    if (msgLogger) {
+        TestMsgLogger_Logf(msgLogger, "RX", "DestroyClient", "ret=%d", (int)ret);
+    }
 
     ret = Iec61850_GlobalUninit();
     print_status_prefix("GlobalUninit", (ret == IEC61850_RET_OK));
     printf("ret=%d\n", (int)ret);
+    if (msgLogger) {
+        TestMsgLogger_Logf(msgLogger, "RX", "GlobalUninit", "ret=%d", (int)ret);
+        TestMsgLogger_LogInfo(msgLogger, "session end");
+    }
 
     set_console_color(FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     printf("====== IEC61850 wrapper cmd Test end ======\n");
     reset_console_color();
+
+    TestMsgLogger_Destroy(msgLogger);
     return 0;
 }
