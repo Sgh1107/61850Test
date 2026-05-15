@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8AC84B86-6E6A-3EE3-9F49-112953B02905}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>iec61850</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">iec61850.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">iec61850</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\src\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">iec61850.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">iec61850</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\src\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">iec61850.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">iec61850</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\src\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">iec61850.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">iec61850</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;snprintf=_snprintf;vsnprintf=_vsnprintf;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;snprintf=_snprintf;vsnprintf=_vsnprintf;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;snprintf=_snprintf;vsnprintf=_vsnprintf;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;snprintf=_snprintf;vsnprintf=_vsnprintf;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;snprintf=_snprintf;vsnprintf=_vsnprintf;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;snprintf=_snprintf;vsnprintf=_vsnprintf;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;snprintf=_snprintf;vsnprintf=_vsnprintf;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;snprintf=_snprintf;vsnprintf=_vsnprintf;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\config;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\hal\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\inc_private;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c;C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging;C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/win1064/Desktop/libiec61850-1.5.3/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+E:\programming\cmake\bin\cmake.exe -SC:/Users/win1064/Desktop/libiec61850-1.5.3 -BC:/Users/win1064/Desktop/libiec61850-1.5.3/build_static --check-stamp-file C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\src\version.rc.in;E:\programming\cmake\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindDoxygen.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindPackageMessage.cmake;E:\programming\cmake\share\cmake-3.23\Modules\GenerateExportHeader.cmake;E:\programming\cmake\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/win1064/Desktop/libiec61850-1.5.3/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+E:\programming\cmake\bin\cmake.exe -SC:/Users/win1064/Desktop/libiec61850-1.5.3 -BC:/Users/win1064/Desktop/libiec61850-1.5.3/build_static --check-stamp-file C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\src\version.rc.in;E:\programming\cmake\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindDoxygen.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindPackageMessage.cmake;E:\programming\cmake\share\cmake-3.23\Modules\GenerateExportHeader.cmake;E:\programming\cmake\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/win1064/Desktop/libiec61850-1.5.3/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+E:\programming\cmake\bin\cmake.exe -SC:/Users/win1064/Desktop/libiec61850-1.5.3 -BC:/Users/win1064/Desktop/libiec61850-1.5.3/build_static --check-stamp-file C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\src\version.rc.in;E:\programming\cmake\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindDoxygen.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindPackageMessage.cmake;E:\programming\cmake\share\cmake-3.23\Modules\GenerateExportHeader.cmake;E:\programming\cmake\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/win1064/Desktop/libiec61850-1.5.3/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+E:\programming\cmake\bin\cmake.exe -SC:/Users/win1064/Desktop/libiec61850-1.5.3 -BC:/Users/win1064/Desktop/libiec61850-1.5.3/build_static --check-stamp-file C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\src\version.rc.in;E:\programming\cmake\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindDoxygen.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;E:\programming\cmake\share\cmake-3.23\Modules\FindPackageMessage.cmake;E:\programming\cmake\share\cmake-3.23\Modules\GenerateExportHeader.cmake;E:\programming\cmake\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;E:\programming\cmake\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\string_map.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\map.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\linked_list.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\byte_buffer.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\string_utilities.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\buffer_chain.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\conversions.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\mem_alloc_linked_list.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\simple_allocator.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_server\iso_connection.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_server\iso_server.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_acse\acse.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\common\mms_type_spec.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\common\mms_value.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\common\mms_common_msg.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_initiate.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_write.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_identify.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_status.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_named_variable_list.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_connection.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_files.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_get_namelist.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_get_var_access.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_common.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_read.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_journals.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_read_service.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_file_service.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_association_service.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_identify_service.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_status_service.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_named_variable_list_service.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_value_cache.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_get_namelist_service.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_access_result.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_server.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_server_common.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_named_variable_list.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_domain.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_device.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_information_report.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_journal.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_journal_service.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_server_connection.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_write_service.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_get_var_access_service.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_cotp\cotp.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_presentation\iso_presentation.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\asn1\ber_decode.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\asn1\asn1_ber_primitive_value.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\asn1\ber_encoder.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\asn1\ber_integer.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_client\iso_client_connection.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_common\iso_connection_parameters.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_session\iso_session.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\client\client_control.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\client\client_report_control.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\client\client_report.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\client\ied_connection.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\common\iec61850_common.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\impl\ied_server.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\impl\ied_server_config.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\impl\client_connection.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\model\model.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\model\dynamic_model.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\model\cdc.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\model\config_file_parser.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\mms_mapping\control.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\mms_mapping\mms_mapping.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\mms_mapping\reporting.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\mms_mapping\logging.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging\log_storage.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DataAccessError.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DeleteNamedVariableListRequest.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constr_SET_OF.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\MmsPdu.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetNamedVariableListAttributesResponse.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\BIT_STRING.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ber_tlv_tag.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constr_SEQUENCE_OF.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\asn_SET_OF.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ReadResponse.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InformationReport.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConfirmedServiceRequest.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DeleteNamedVariableListResponse.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\asn_SEQUENCE_OF.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\VariableAccessSpecification.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetVariableAccessAttributesRequest.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\xer_support.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ObjectName.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\NativeEnumerated.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\per_encoder.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constr_SEQUENCE.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetNameListResponse.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\MMSString.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InitiateErrorPdu.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\IndexRangeSeq.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConfirmedErrorPDU.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\UnconfirmedService.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\UTF8String.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ServiceError.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\TimeOfDay.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetNameListRequest.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\asn_codecs_prim.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Data.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ScatteredAccessDescription.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ReadRequest.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\per_decoder.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Identifier.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ServiceSupportOptions.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Integer8.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConfirmedServiceResponse.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ParameterSupportOptions.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Integer16.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ber_tlv_length.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\OCTET_STRING.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DefineNamedVariableListRequest.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\FloatingPoint.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\xer_encoder.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Unsigned8.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\BOOLEAN.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\INTEGER.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\UnconfirmedPDU.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DataSequence.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constraints.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\der_encoder.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\VisibleString.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InitiateResponsePdu.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\StructComponent.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Address.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Unsigned16.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ber_decoder.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\per_support.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\WriteResponse.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InitRequestDetail.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InitiateRequestPdu.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DefineNamedVariableListResponse.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\NULL.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ListOfVariableSeq.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\UtcTime.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConcludeResponsePDU.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\AccessResult.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Integer32.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetNamedVariableListAttributesRequest.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\VariableSpecification.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Unsigned32.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constr_CHOICE.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\AlternateAccess.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ObjectClass.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InitResponseDetail.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConfirmedResponsePdu.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetVariableAccessAttributesResponse.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\NativeInteger.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\xer_decoder.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\AlternateAccessSelection.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConfirmedRequestPdu.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConcludeRequestPDU.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\WriteRequest.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\RejectPDU.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\TypeSpecification.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constr_TYPE.c" />
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GeneralizedTime.c" />
+    <ResourceCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\src\version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\ZERO_CHECK.vcxproj">
+      <Project>{CE6B837E-FE02-356C-B52B-9E58B36684CD}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\hal\hal.vcxproj">
+      <Project>{B2EA1187-67D8-3D70-92D9-FE8B82283398}</Project>
+      <Name>hal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

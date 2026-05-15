@@ -1,0 +1,12 @@
+# CMake generation dependency list for this directory.
+C:/Users/win1064/Desktop/libiec61850-1.5.3/src/CMakeLists.txt
+C:/Users/win1064/Desktop/libiec61850-1.5.3/src/version.rc.in
+E:/programming/cmake/share/cmake-3.23/Modules/CheckCCompilerFlag.cmake
+E:/programming/cmake/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake
+E:/programming/cmake/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake
+E:/programming/cmake/share/cmake-3.23/Modules/FindDoxygen.cmake
+E:/programming/cmake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake
+E:/programming/cmake/share/cmake-3.23/Modules/FindPackageMessage.cmake
+E:/programming/cmake/share/cmake-3.23/Modules/GenerateExportHeader.cmake
+E:/programming/cmake/share/cmake-3.23/Modules/Internal/CheckCompilerFlag.cmake
+E:/programming/cmake/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake

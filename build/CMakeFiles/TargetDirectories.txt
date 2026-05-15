@@ -1,0 +1,4 @@
+C:/Users/win1064/Desktop/iec61850wrapper/build/CMakeFiles/iec61850_wrapper.dir
+C:/Users/win1064/Desktop/iec61850wrapper/build/CMakeFiles/iec61850_wrapper_test.dir
+C:/Users/win1064/Desktop/iec61850wrapper/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/win1064/Desktop/iec61850wrapper/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,4 @@
+# CMake generation dependency list for this directory.
+C:/Users/win1064/Desktop/libiec61850-1.5.3/hal/CMakeLists.txt
+E:/programming/cmake/share/cmake-3.23/Modules/CheckLibraryExists.cmake
+E:/programming/cmake/share/cmake-3.23/Modules/TestBigEndian.cmake

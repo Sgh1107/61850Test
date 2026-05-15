@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\socket\win32\socket_win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\thread\win32\thread_win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\filesystem\win32\file_provider_win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\time\win32\time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\serial\win32\serial_port_win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\memory\lib_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\hal\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DC438383-BBD3-37F3-B98E-1927EADB9CB2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

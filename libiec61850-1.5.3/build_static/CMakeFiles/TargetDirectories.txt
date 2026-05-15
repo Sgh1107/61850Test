@@ -1,0 +1,14 @@
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/CMakeFiles/PACKAGE.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/CMakeFiles/RUN_TESTS.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/CMakeFiles/INSTALL.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/CMakeFiles/ALL_BUILD.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/CMakeFiles/ZERO_CHECK.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/hal/CMakeFiles/hal.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/hal/CMakeFiles/PACKAGE.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/hal/CMakeFiles/RUN_TESTS.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/hal/CMakeFiles/INSTALL.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/hal/CMakeFiles/ALL_BUILD.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/src/CMakeFiles/iec61850.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/src/CMakeFiles/PACKAGE.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/src/CMakeFiles/RUN_TESTS.dir
+C:/Users/win1064/Desktop/libiec61850-1.5.3/build_static/src/CMakeFiles/INSTALL.dir

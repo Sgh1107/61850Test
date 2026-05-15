@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\string_map.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\map.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\linked_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\byte_buffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\string_utilities.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\buffer_chain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\conversions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\mem_alloc_linked_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\common\simple_allocator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_server\iso_connection.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_server\iso_server.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_acse\acse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\common\mms_type_spec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\common\mms_value.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\common\mms_common_msg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_initiate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_write.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_identify.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_status.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_named_variable_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_connection.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_files.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_get_namelist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_get_var_access.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_read.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\client\mms_client_journals.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_read_service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_file_service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_association_service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_identify_service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_status_service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_named_variable_list_service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_value_cache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_get_namelist_service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_access_result.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_server.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_server_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_named_variable_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_domain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_device.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_information_report.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_journal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_journal_service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_server_connection.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_write_service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\server\mms_get_var_access_service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_cotp\cotp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_presentation\iso_presentation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\asn1\ber_decode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\asn1\asn1_ber_primitive_value.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\asn1\ber_encoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\asn1\ber_integer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_client\iso_client_connection.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_common\iso_connection_parameters.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_session\iso_session.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\client\client_control.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\client\client_report_control.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\client\client_report.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\client\ied_connection.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\common\iec61850_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\impl\ied_server.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\impl\ied_server_config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\impl\client_connection.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\model\model.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\model\dynamic_model.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\model\cdc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\model\config_file_parser.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\mms_mapping\control.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\mms_mapping\mms_mapping.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\mms_mapping\reporting.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\iec61850\server\mms_mapping\logging.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\logging\log_storage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DataAccessError.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DeleteNamedVariableListRequest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constr_SET_OF.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\MmsPdu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetNamedVariableListAttributesResponse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\BIT_STRING.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ber_tlv_tag.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constr_SEQUENCE_OF.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\asn_SET_OF.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ReadResponse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InformationReport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConfirmedServiceRequest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DeleteNamedVariableListResponse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\asn_SEQUENCE_OF.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\VariableAccessSpecification.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetVariableAccessAttributesRequest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\xer_support.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ObjectName.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\NativeEnumerated.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\per_encoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constr_SEQUENCE.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetNameListResponse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\MMSString.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InitiateErrorPdu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\IndexRangeSeq.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConfirmedErrorPDU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\UnconfirmedService.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\UTF8String.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ServiceError.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\TimeOfDay.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetNameListRequest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\asn_codecs_prim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Data.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ScatteredAccessDescription.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ReadRequest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\per_decoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Identifier.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ServiceSupportOptions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Integer8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConfirmedServiceResponse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ParameterSupportOptions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Integer16.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ber_tlv_length.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\OCTET_STRING.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DefineNamedVariableListRequest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\FloatingPoint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\xer_encoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Unsigned8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\BOOLEAN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\INTEGER.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\UnconfirmedPDU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DataSequence.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constraints.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\der_encoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\VisibleString.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InitiateResponsePdu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\StructComponent.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Address.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Unsigned16.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ber_decoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\per_support.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\WriteResponse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InitRequestDetail.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InitiateRequestPdu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\DefineNamedVariableListResponse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\NULL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ListOfVariableSeq.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\UtcTime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConcludeResponsePDU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\AccessResult.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Integer32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetNamedVariableListAttributesRequest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\VariableSpecification.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\Unsigned32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constr_CHOICE.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\AlternateAccess.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ObjectClass.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\InitResponseDetail.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConfirmedResponsePdu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GetVariableAccessAttributesResponse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\NativeInteger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\xer_decoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\AlternateAccessSelection.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConfirmedRequestPdu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\ConcludeRequestPDU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\WriteRequest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\RejectPDU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\TypeSpecification.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\constr_TYPE.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\mms\iso_mms\asn1c\GeneralizedTime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\win1064\Desktop\libiec61850-1.5.3\build_static\src\version.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DC438383-BBD3-37F3-B98E-1927EADB9CB2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
